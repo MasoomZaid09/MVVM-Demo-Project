@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/customerHomePage">
+
+    <fragment
+        android:id="@+id/customerHomePage"
+        android:name="com.kanabix.ui.fragment.Tabs.CustomerHomePage"
+        android:label="fragment_customer_home_page"
+        tools:layout="@layout/fragment_customer_home_page">
+
+        <action
+            android:id="@+id/action_customerHomePage_to_categoryList"
+            app:destination="@id/categoryList"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+
+        <action
+            android:id="@+id/action_customerHomePage_to_chooseDeliveryAddressFragment"
+            app:destination="@id/chooseDeliveryAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerHomePage_to_dealsFragment"
+            app:destination="@id/dealsFragment"
+             />
+        <action
+            android:id="@+id/action_customerHomePage_to_productsList"
+            app:destination="@id/productsList"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_customerHomePage_to_viewProduct"
+            app:destination="@id/viewProduct"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_customerHomePage_to_viewDealScreen"
+            app:destination="@id/viewDealScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_customerHomePage_self"
+            app:destination="@id/customerHomePage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryList"
+        android:name="com.kanabix.ui.fragment.Tabs.CategoryList"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryList_to_productsList"
+            app:destination="@id/productsList"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentFindStoreNearYou"
+        android:name="com.kanabix.ui.fragment.Tabs.FragmentFindStoreNearYou"
+        android:label="fragment_find_store_near_you"
+        tools:layout="@layout/fragment_find_store_near_you" >
+        <action
+            android:id="@+id/action_fragmentFindStoreNearYou_to_storeViewProductFragment"
+            app:destination="@id/storeViewProductFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.kanabix.ui.fragment.Tabs.MyOrdersFragment"
+        android:label="fragment_my_orders"
+        tools:layout="@layout/fragment_my_orders" >
+        <action
+            android:id="@+id/action_myOrdersFragment_to_orderDescription"
+            app:destination="@id/orderDescription"
+            />
+        <action
+            android:id="@+id/action_myOrdersFragment_to_notification"
+            app:destination="@id/notification"
+            app:popUpTo="@id/notification"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myAccount"
+        android:name="com.kanabix.ui.fragment.Tabs.MyAccount"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account">
+
+        <action
+            android:id="@+id/action_myAccount_to_changepassword"
+            app:destination="@id/changepassword"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_myAccount_to_rerferId"
+            app:destination="@id/rerferId"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_myAccount_to_editprofile"
+            app:destination="@id/editprofile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <argument
+            android:name="MyAccountToEditProfile"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseDeliveryAddressFragment"
+        android:name="com.kanabix.ui.fragment.location.ChooseDeliveryAddressFragment"
+        android:label="fragment_choose_delivery_address"
+        tools:layout="@layout/fragment_choose_delivery_address" >
+        <action
+            android:id="@+id/action_chooseDeliveryAddressFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment"
+            />
+
+        <argument
+            android:name="deliveryAddNewAddress"
+            app:argType="string"
+            android:defaultValue="Add"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dealsFragment"
+        android:name="com.kanabix.ui.fragment.deals.DealsFragment"
+        android:label="fragment_deals"
+        tools:layout="@layout/fragment_deals">
+
+        <action
+            android:id="@+id/action_dealsFragment_to_viewDealScreen"
+            app:destination="@id/viewDealScreen"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productsList"
+        android:name="com.kanabix.ui.fragment.products.ProductsList"
+        android:label="fragment_products_list"
+        tools:layout="@layout/fragment_products_list" >
+        <action
+            android:id="@+id/action_productsList_to_viewProduct"
+            app:destination="@id/viewProduct"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewProduct"
+        android:name="com.kanabix.ui.fragment.products.ViewProduct"
+        android:label="fragment_view_product"
+        tools:layout="@layout/fragment_view_product" >
+
+        <action
+            android:id="@+id/action_viewProduct_to_cartFragment"
+            app:destination="@id/cartFragment"
+            />
+
+        <action
+            android:id="@+id/action_viewProduct_to_storeViewProductFragment"
+            app:destination="@id/storeViewProductFragment"
+            />
+
+        <action
+            android:id="@+id/action_viewProduct_to_deleviryAddNewAddress"
+            app:destination="@id/deleviryAddNewAddress"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewDealScreen"
+        android:name="com.kanabix.ui.fragment.deals.ViewDealScreen"
+        android:label="ViewDealScreen" >
+        <action
+            android:id="@+id/action_viewDealScreen_to_cartFragment"
+            app:destination="@id/cartFragment"
+            />
+        <action
+            android:id="@+id/action_viewDealScreen_to_deleviryAddNewAddress"
+            app:destination="@id/deleviryAddNewAddress"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_viewDealScreen_to_storeViewProductFragment"
+            app:destination="@id/storeViewProductFragment"
+            />
+        <action
+            android:id="@+id/action_viewDealScreen_self"
+            app:destination="@id/viewDealScreen"
+            />
+        <action
+            android:id="@+id/action_viewDealScreen_to_notification"
+            app:destination="@id/notification"
+            app:popUpTo="@id/notification"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/storeViewProductFragment"
+        android:name="com.kanabix.ui.fragment.store.StoreViewProductFragment"
+        android:label="fragment_store_view_product"
+        tools:layout="@layout/fragment_store_view_product" >
+
+        <action
+            android:id="@+id/action_storeViewProductFragment_to_viewProduct"
+            app:destination="@id/viewProduct"
+            />
+        <action
+            android:id="@+id/action_storeViewProductFragment_to_fragmentFindStoreNearYou"
+            app:destination="@id/fragmentFindStoreNearYou"
+            app:popUpTo="@id/fragmentFindStoreNearYou"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.kanabix.ui.fragment.toolbar.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_deleviryAddNewAddress"
+            app:destination="@id/deleviryAddNewAddress"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/deleviryAddNewAddress"
+        android:name="com.kanabix.ui.fragment.payments.DeleviryAddNewAddress"
+        android:label="fragment_deleviry_add_new_address"
+        tools:layout="@layout/fragment_deleviry_add_new_address" >
+        <action
+            android:id="@+id/action_deleviryAddNewAddress_to_addAddressFragment"
+            app:destination="@id/addAddressFragment"
+            />
+
+        <argument
+            android:name="deliveryAddNewAddress"
+            app:argType="string"
+            android:defaultValue=""/>
+        <action
+            android:id="@+id/action_deleviryAddNewAddress_to_cartSummeryFragment"
+            app:destination="@id/cartSummeryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDescription"
+        android:name="com.kanabix.ui.fragment.OrderSummaryFragment"
+        android:label="fragment_order_description"
+        tools:layout="@layout/fragment_order_summary" >
+        <action
+            android:id="@+id/action_orderDescription_to_viewProduct"
+            app:destination="@id/viewProduct"
+            app:popUpTo="@id/viewProduct"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_orderDescription_to_notification"
+            app:destination="@id/notification"
+            app:popUpTo="@id/notification"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rerferId"
+        android:name="com.kanabix.ui.fragment.account.RerferId"
+        android:label="fragment_rerfer_id"
+        tools:layout="@layout/fragment_rerfer_id" >
+        <action
+            android:id="@+id/action_rerferId_to_faqFragment"
+            app:destination="@id/faqFragment"
+            />
+        <action
+            android:id="@+id/action_rerferId_to_termsFragment"
+            app:destination="@id/termsFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.kanabix.ui.fragment.legals.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
+
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.kanabix.ui.fragment.legals.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/cartSummeryFragment"
+        android:name="com.kanabix.ui.fragment.payments.CartSummeryFragment"
+        android:label="fragment_cart_summery"
+        tools:layout="@layout/fragment_cart_summery" >
+        <action
+            android:id="@+id/action_cartSummeryFragment_to_paymentDetailsFragment"
+            app:destination="@id/paymentDetailsFragment"
+           />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentDetailsFragment"
+        android:name="com.kanabix.ui.fragment.payments.PaymentDetailsFragment"
+        android:label="fragment_payment_details"
+        tools:layout="@layout/fragment_payment_details" >
+        <action
+            android:id="@+id/action_paymentDetailsFragment_to_myOrdersFragment"
+            app:destination="@id/myOrdersFragment"
+            />
+        <action
+            android:id="@+id/action_paymentDetailsFragment_to_customerHomePage"
+            app:destination="@id/customerHomePage"
+            app:popUpTo="@id/customerHomePage"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.kanabix.ui.fragment.orderFlow.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" >
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_orderManagment2"
+            app:destination="@id/orderManagment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderManagment"
+        android:name="com.kanabix.ui.fragment.DeliveryTab.OrderManagment"
+        android:label="fragment_order_managment"
+        tools:layout="@layout/fragment_order_managment" >
+
+        <action
+            android:id="@+id/action_orderManagment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changepassword"
+        android:name="com.kanabix.ui.fragment.account.Changepassword"
+        android:label="fragment_changepassword"
+        tools:layout="@layout/fragment_changepassword" >
+
+        <argument
+            android:name="settingToChangePassword"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.kanabix.ui.fragment.toolbar.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" >
+        <action
+            android:id="@+id/action_wishListFragment_to_viewProduct"
+            app:destination="@id/viewProduct" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.kanabix.ui.fragment.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" >
+        <argument
+            android:name="deliveryAddNewAddress"
+            app:argType="string"
+            android:defaultValue=""/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/editprofile"
+        android:name="com.kanabix.ui.fragment.Editprofile"
+        android:label="Editprofile">
+
+        <argument
+            android:name="MyAccountToEditProfile"
+            app:argType="string"
+            android:defaultValue=""/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.kanabix.ui.fragment.toolbar.Notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+
+        <action
+            android:id="@+id/action_notification_to_viewDealScreen"
+            app:destination="@id/viewDealScreen"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/viewDealScreen"
+            app:launchSingleTop="true"
+            />
+        <action
+            android:id="@+id/action_notification_to_orderDescription"
+            app:destination="@id/orderDescription"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/orderDescription"
+            app:launchSingleTop="true"
+            />
+
+        <action
+            android:id="@+id/action_notification_to_customerHomePage"
+            app:destination="@id/customerHomePage"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/customerHomePage"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_notification_to_myOrdersFragment"
+            app:destination="@id/myOrdersFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/myOrdersFragment"
+            app:launchSingleTop="true"/>
+    </fragment>
+
+
+
+</navigation>

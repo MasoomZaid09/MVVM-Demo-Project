@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/orderManagment2"
+        android:title="Order"
+        android:icon="@drawable/ic_order_grey"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/paymentReciptFragment"
+        android:title="Payment"
+        android:icon="@drawable/ic_payment_grey"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/myAccount2"
+        android:title="@string/Account"
+        android:icon="@drawable/account_grey_image"
+        app:showAsAction="ifRoom"/>
+
+</menu>

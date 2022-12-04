@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.acitivity.RegisterActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cardcorner"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@color/HomeThemeColor"
+            android:src="@drawable/half_splash" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_15sdp"
+            android:layout_marginBottom="-40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/header_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_sign_up"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+                    // name
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_your_name"
+                        android:inputType="textCapWords"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:digits="QWERTYUIOPLAKSJDHFGZMXNCBV wqertyuioplkjhfgdsasmnbvcxz"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:visibility="visible"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/header_title"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewName"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/etName"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewName"/>
+
+                    // mobile number
+
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:ccp_defaultPhoneCode="91"
+                        app:ccp_textSize="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/viewHorizontal1"
+                        app:layout_constraintTop_toTopOf="@id/viewHorizontal1"
+                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal1"/>
+
+                    <View
+                        android:id="@+id/viewHorizontal1"
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toEndOf="@id/ccp"
+                        app:layout_constraintTop_toBottomOf="@id/tvName"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_your_phone_number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:maxLines="1"
+                        android:digits="0123456789"
+                        android:visibility="visible"
+                        android:textSize="@dimen/_11sdp"
+                        app:layout_constraintStart_toEndOf="@id/viewHorizontal1"
+                        app:layout_constraintTop_toTopOf="@id/viewHorizontal1"
+                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal1"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintTop_toBottomOf="@id/viewHorizontal1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvMobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewPhoneNumber"/>
+
+                    // email
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:maxLength="100"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="visible"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvMobile"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/etEmail"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewEmail"/>
+
+                    // pincode
+                    <EditText
+                        android:id="@+id/etPincode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_pincode"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:digits="0123456789"
+                        android:visibility="visible"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/etPincode"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvPincode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewPincode"/>
+
+                    // country
+
+
+                    <TextView
+                        android:id="@+id/txtCountry"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/icon"
+                        app:layout_constraintTop_toBottomOf="@id/tvPincode"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:hint="@string/select_your_country"
+                        android:text=""
+                        android:fontFamily="@font/public_sans_regular"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:src="@drawable/down_arrow"
+                        app:layout_constraintStart_toEndOf="@id/txtCountry"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtCountry"
+                        app:layout_constraintBottom_toBottomOf="@id/txtCountry"/>
+
+
+                    <View
+                        android:id="@+id/viewCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCountry"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvCountry"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewCountry"/>
+
+
+
+                    // state
+
+
+                    <TextView
+                        android:id="@+id/txtState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/icon"
+                        app:layout_constraintTop_toBottomOf="@id/tvCountry"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:hint="@string/select_your_state"
+                        android:text=""
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:fontFamily="@font/public_sans_regular"
+                        android:layout_marginTop="@dimen/_15sdp" />
+
+                    <ImageView
+                        android:id="@+id/icon1"
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:src="@drawable/down_arrow"
+                        app:layout_constraintStart_toEndOf="@id/txtState"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtState"
+                        app:layout_constraintBottom_toBottomOf="@id/txtState"/>
+
+
+                    <View
+                        android:id="@+id/viewState"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtState"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewState"/>
+
+                    // state
+
+
+                    <TextView
+                        android:id="@+id/txtCity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/icon1"
+                        app:layout_constraintTop_toBottomOf="@id/tvState"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:hint="@string/select_your_city"
+                        android:text=""
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:fontFamily="@font/public_sans_regular"
+                        android:layout_marginTop="@dimen/_15sdp" />
+
+                    <ImageView
+                        android:id="@+id/icon2"
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:src="@drawable/down_arrow"
+                        app:layout_constraintStart_toEndOf="@id/txtCity"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtCity"
+                        app:layout_constraintBottom_toBottomOf="@id/txtCity"/>
+
+
+                    <View
+                        android:id="@+id/viewCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCity"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewCity"/>
+
+                    // address
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_your_address"
+                        android:inputType="textCapSentences"
+                        android:maxLength="30"
+                        android:maxLines="2"
+                        android:visibility="visible"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCity"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/etAddress"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewAddress"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/llUploadDocument"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvAddress">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/btnUploadDocument"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/upload_documents"
+                                android:visibility="visible"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/white"
+                                android:background="@null"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginTop="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:id="@+id/txtUploadedFile"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_11sdp"
+                                android:textColor="@color/HomeThemeColor"
+                                android:text=""
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                app:layout_constraintStart_toEndOf="@id/btnUploadDocument"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/btnUploadDocument"
+                                app:layout_constraintBottom_toBottomOf="@id/btnUploadDocument"/>
+
+                            <View
+                                android:id="@+id/viewUploadDocument"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:background="@color/HomeThemeColor"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/btnUploadDocument" />
+
+                            <TextView
+                                android:id="@+id/tvUploadDocument"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/error_color"
+                                android:textSize="@dimen/_10sdp"
+                                android:text=""
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:visibility="gone"
+                                android:fontFamily="@font/public_sans_regular"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/viewUploadDocument"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    // password
+
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/imgEye"
+                        app:layout_constraintEnd_toStartOf="@id/imgEye"
+                        app:layout_constraintBottom_toBottomOf="@id/imgEye"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        android:layout_marginStart="@dimen/_15sdp"/>
+
+                    <ImageView
+                        android:id="@+id/imgEye"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:src="@drawable/ic__cross_eye"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llUploadDocument"
+                        android:layout_marginEnd="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintTop_toBottomOf="@id/imgEye"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewPassword"/>
+
+
+                    // confirm password
+
+
+                    <EditText
+                        android:id="@+id/etConfirmPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/please_confirm_password"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/imgConfirmEye"
+                        app:layout_constraintEnd_toStartOf="@id/imgConfirmEye"
+                        app:layout_constraintBottom_toBottomOf="@id/imgConfirmEye"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        android:layout_marginStart="@dimen/_15sdp"/>
+
+                    <ImageView
+                        android:id="@+id/imgConfirmEye"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:src="@drawable/ic__cross_eye"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvPassword"
+                        android:layout_marginEnd="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintTop_toBottomOf="@id/imgConfirmEye"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvConfirmPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewConfirmPassword"/>
+
+                    // check box
+
+                    <CheckBox
+                        android:id="@+id/cbTerms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/i_agree_to_terms_and_conditions"
+                        android:textColor="@color/Heading_Color"
+                        app:layout_constraintTop_toBottomOf="@id/tvConfirmPassword"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textAlignment="center"
+                        android:buttonTint="@color/HomeThemeColor"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvTerms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cbTerms"/>
+
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_background"
+                        android:text="@string/sign_up"
+                        android:textSize="@dimen/_12sdp"
+                        android:textAllCaps="false"
+                        android:paddingHorizontal="@dimen/_60sdp"
+                        android:paddingVertical="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTerms"/>
+
+
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/already_have_an_account_login"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btnSignUp"
+                        app:layout_constraintBottom_toTopOf="@id/guideline"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/public_sans_regular"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.95"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:theme="@style/progressBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

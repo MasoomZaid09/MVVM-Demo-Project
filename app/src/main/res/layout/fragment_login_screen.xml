@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_drawable"
+    tools:context=".ui.bottomSheets.LoginScreen">
+
+    <ImageView
+        android:id="@+id/btnCancel"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/cut_icon"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout5"
+        app:layout_constraintTop_toTopOf="@id/linearLayout5"
+        android:translationZ="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cardcorner"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:background="@color/HomeThemeColor"
+            android:src="@drawable/half_splash" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_marginBottom="-40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/customerLoginLayout"
+                    android:visibility="visible"
+                    tools:ignore="ExtraText">
+
+                    <TextView
+                        android:id="@+id/header_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+                    customer title layout
+                    <LinearLayout
+                        android:id="@+id/customerTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/header_title"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/txtEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/HomeThemeColor"
+                                android:textSize="@dimen/_11sdp"
+                                android:fontFamily="@font/public_sans_semi_bold"
+                                android:text="@string/email"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                            <View
+                                android:id="@+id/viewEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="2dp"
+                                android:visibility="visible"
+                                android:background="@color/HomeThemeColor"
+                                app:layout_constraintStart_toStartOf="@id/txtEmail"
+                                app:layout_constraintEnd_toEndOf="@id/txtEmail"
+                                app:layout_constraintTop_toBottomOf="@id/txtEmail"/>
+
+                            <TextView
+                                android:id="@+id/txtPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/Heading_Color"
+                                android:textSize="@dimen/_11sdp"
+                                android:fontFamily="@font/public_sans_semi_bold"
+                                android:text="@string/phone_number"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                app:layout_constraintStart_toEndOf="@id/txtEmail"
+                                app:layout_constraintTop_toTopOf="@id/txtEmail"
+                                android:layout_marginStart="@dimen/_15sdp"/>
+
+                            <View
+                                android:id="@+id/phoneNumberView"
+                                android:layout_width="0dp"
+                                android:layout_height="2dp"
+                                android:visibility="gone"
+                                android:background="@color/HomeThemeColor"
+                                app:layout_constraintStart_toStartOf="@id/txtPhone"
+                                app:layout_constraintEnd_toEndOf="@id/txtPhone"
+                                app:layout_constraintTop_toBottomOf="@id/txtPhone"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+<!--                    delivery title layout-->
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/deliveryTitleLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:visibility="gone"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/header_title"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtDelivery"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:textColor="@color/HomeThemeColor"-->
+<!--                                android:textSize="@dimen/_11sdp"-->
+<!--                                android:fontFamily="@font/public_sans_semi_bold"-->
+<!--                                android:text="@string/delivery_partner_id"-->
+<!--                                app:layout_constraintTop_toTopOf="parent"-->
+<!--                                android:layout_marginHorizontal="@dimen/_15sdp"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"/>-->
+
+<!--                            <View-->
+<!--                                android:id="@+id/viewDelivery"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="2dp"-->
+<!--                                android:visibility="visible"-->
+<!--                                android:background="@color/HomeThemeColor"-->
+<!--                                app:layout_constraintStart_toStartOf="@id/txtDelivery"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/txtDelivery"-->
+<!--                                app:layout_constraintTop_toBottomOf="@id/txtDelivery"/>-->
+
+
+
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                    </LinearLayout>-->
+
+                    // email
+                    <LinearLayout
+                        android:id="@+id/emailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/customerTitleLayout"
+                        android:layout_marginTop="@dimen/_35sdp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imgEmail"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@drawable/email"
+                                android:visibility="visible"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/viewHorizontal1"
+                                app:layout_constraintBottom_toBottomOf="@id/viewHorizontal1"
+                                android:layout_marginStart="@dimen/_15sdp"/>
+
+                            <View
+                                android:id="@+id/viewHorizontal1"
+                                android:layout_width="2dp"
+                                android:visibility="visible"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/HomeThemeColor"
+                                app:layout_constraintStart_toEndOf="@id/imgEmail"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <EditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_email"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:maxLength="100"
+                                android:textSize="@dimen/_11sdp"
+                                android:visibility="visible"
+                                android:paddingVertical="@dimen/_5sdp"
+                                app:layout_constraintStart_toEndOf="@id/viewHorizontal1"
+                                app:layout_constraintTop_toTopOf="@id/viewHorizontal1"
+                                app:layout_constraintBottom_toBottomOf="@id/viewHorizontal1"
+                                android:textColor="@color/Heading_Color"
+                                android:background="@null"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+                            <View
+                                android:id="@+id/viewPhoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:visibility="visible"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:background="@color/HomeThemeColor"
+                                app:layout_constraintTop_toBottomOf="@id/viewHorizontal1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    // phone number
+                    <LinearLayout
+                        android:id="@+id/phoneLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/customerTitleLayout"
+                        android:layout_marginTop="@dimen/_35sdp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imgPhone"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@drawable/phone_logo"
+                                android:visibility="visible"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/phoneView"
+                                app:layout_constraintBottom_toBottomOf="@id/phoneView"
+                                android:layout_marginStart="@dimen/_15sdp"/>
+
+                            <EditText
+                                android:id="@+id/etPhone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_your_phone_number"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:visibility="visible"
+                                android:textSize="@dimen/_11sdp"
+                                android:paddingVertical="@dimen/_5sdp"
+                                app:layout_constraintStart_toEndOf="@id/phoneView"
+                                app:layout_constraintTop_toTopOf="@id/phoneView"
+                                app:layout_constraintBottom_toBottomOf="@id/phoneView"
+                                android:textColor="@color/Heading_Color"
+                                android:background="@null"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+
+                            <View
+                                android:id="@+id/phoneView"
+                                android:layout_width="2dp"
+                                android:visibility="visible"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/HomeThemeColor"
+                                app:layout_constraintStart_toEndOf="@id/imgPhone"
+                                app:layout_constraintTop_toTopOf="parent"
+                                />
+
+
+
+                            <View
+                                android:id="@+id/viewPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:visibility="visible"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:background="@color/HomeThemeColor"
+                                app:layout_constraintTop_toBottomOf="@id/phoneView"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+<!--                    // delivery partner-->
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/deliveryPartnerLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:visibility="gone"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/deliveryTitleLayout"-->
+<!--                        android:layout_marginTop="@dimen/_35sdp">-->
+
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imgDeliveryPartner"-->
+<!--                                android:layout_width="@dimen/_20sdp"-->
+<!--                                android:layout_height="@dimen/_20sdp"-->
+<!--                                android:src="@drawable/delivery_partner_icon"-->
+<!--                                android:visibility="visible"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="@id/deliveryView"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/deliveryView"-->
+<!--                                android:layout_marginStart="@dimen/_15sdp"/>-->
+
+<!--                            &lt;!&ndash;                            <EditText&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:id="@+id/etDelivery"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:layout_width="0dp"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:hint="@string/enter_your_delivery_partner_id"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:inputType="textCapWords"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNM-"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:maxLength="25"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:maxLines="1"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:visibility="visible"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:textSize="@dimen/_11sdp"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                app:layout_constraintStart_toEndOf="@id/deliveryView"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                app:layout_constraintTop_toTopOf="@id/deliveryView"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                app:layout_constraintBottom_toBottomOf="@id/deliveryView"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:textColor="@color/Heading_Color"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:background="@null"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:paddingVertical="@dimen/_5sdp"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:layout_marginHorizontal="@dimen/_15sdp"/>&ndash;&gt;-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/etDelivery"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:hint="@string/enter_your_delivery_partner_id"-->
+<!--                                android:inputType="textCapCharacters"-->
+<!--                                android:maxLength="30"-->
+<!--                                android:maxLines="1"-->
+<!--                                android:textSize="@dimen/_11sdp"-->
+<!--                                android:visibility="visible"-->
+<!--                                android:paddingVertical="@dimen/_5sdp"-->
+<!--                                app:layout_constraintStart_toEndOf="@id/deliveryView"-->
+<!--                                app:layout_constraintTop_toTopOf="@id/deliveryView"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/deliveryView"-->
+<!--                                android:textColor="@color/Heading_Color"-->
+<!--                                android:background="@null"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                android:layout_marginHorizontal="@dimen/_15sdp"/>-->
+<!--                            <View-->
+<!--                                android:id="@+id/deliveryView"-->
+<!--                                android:layout_width="2dp"-->
+<!--                                android:visibility="visible"-->
+<!--                                android:layout_height="@dimen/_22sdp"-->
+<!--                                android:layout_marginStart="@dimen/_10sdp"-->
+<!--                                android:background="@color/HomeThemeColor"-->
+<!--                                app:layout_constraintStart_toEndOf="@id/imgDeliveryPartner"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                            <View-->
+<!--                                android:id="@+id/viewDeliveryPartner"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="2dp"-->
+<!--                                android:visibility="visible"-->
+<!--                                android:layout_marginHorizontal="@dimen/_15sdp"-->
+<!--                                android:background="@color/HomeThemeColor"-->
+<!--                                app:layout_constraintTop_toBottomOf="@id/deliveryView"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                android:layout_marginTop="@dimen/_5sdp"/>-->
+
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                    </LinearLayout>-->
+
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/emailLayout"/>
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/phoneLayout"/>
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvDelivery"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textColor="@color/error_color"-->
+<!--                        android:textSize="@dimen/_10sdp"-->
+<!--                        android:text=""-->
+<!--                        android:layout_marginHorizontal="@dimen/_15sdp"-->
+<!--                        android:visibility="gone"-->
+<!--                        android:fontFamily="@font/public_sans_regular"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/deliveryPartnerLayout"/>-->
+
+                    // password
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/midGuideline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.29"/>
+
+                    <ImageView
+                        android:id="@+id/imgPassword"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/password"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/viewHorizontal2"
+                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal2"
+                        android:layout_marginStart="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewHorizontal2"
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintStart_toEndOf="@id/imgPassword"
+                        app:layout_constraintTop_toBottomOf="@id/midGuideline"
+                        android:layout_marginTop="@dimen/_25sdp"/>
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        app:layout_constraintStart_toEndOf="@id/viewHorizontal2"
+                        app:layout_constraintTop_toTopOf="@id/viewHorizontal2"
+                        app:layout_constraintEnd_toStartOf="@id/imgEye"
+                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal2"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        android:layout_marginStart="@dimen/_15sdp"/>
+
+                    <ImageView
+                        android:id="@+id/imgEye"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic__cross_eye"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/viewHorizontal2"
+                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal2"
+                        android:layout_marginEnd="@dimen/_25sdp"/>
+
+                    <View
+                        android:id="@+id/viewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintTop_toBottomOf="@id/viewHorizontal2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text=""
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewPassword"
+                        app:layout_constraintBottom_toTopOf="@id/cbRemember"/>
+
+
+
+
+                    // checkbox
+                    <CheckBox
+                        android:id="@+id/cbRemember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remember_me"
+                        android:textColor="@color/LightHomeThemeColor"
+                        app:layout_constraintTop_toBottomOf="@id/tvPassword"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textAlignment="center"
+                        android:buttonTint="@color/HomeThemeColor"
+                        android:textSize="@dimen/_11sdp"/>
+
+
+                    <TextView
+                        android:id="@+id/txtForgetPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forgot_password"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/LightHomeThemeColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cbRemember"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"/>
+
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_background"
+                        android:text="@string/login"
+                        android:textSize="@dimen/_14sdp"
+                        android:textAllCaps="false"
+                        android:theme="@style/BottomSheetTheme"
+                        android:paddingHorizontal="@dimen/_50sdp"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cbRemember"/>
+
+                    <TextView
+                        android:id="@+id/txtSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/don_t_have_an_account_signup"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/public_sans_regular"/>
+
+                    <TextView
+                        android:id="@+id/txtTerms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:layout_marginHorizontal="@dimen/_30sdp"
+                        android:text="@string/by_accessing_this_site_you_accept_the_terms_conditions_and_privacy_policy"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtSignUp"
+                        app:layout_constraintBottom_toTopOf="@id/txtSwitchRoll"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/public_sans_regular"/>
+
+
+
+                    <TextView
+                        android:id="@+id/txtSwitchRoll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/guideline"
+                        app:layout_constraintTop_toBottomOf="@id/txtTerms"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/HomeThemeColor"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/public_sans_semi_bold"/>
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.95"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:id="@+id/deliveryPartnerLoginLayout"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    tools:ignore="ExtraText">-->
+
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/delivery_header_title"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/login"-->
+                <!--                        android:textSize="@dimen/_16sdp"-->
+                <!--                        android:textColor="@color/Heading_Color"-->
+                <!--                        android:fontFamily="@font/public_sans_semi_bold"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                <!--                        android:layout_marginTop="@dimen/_20sdp"-->
+                <!--                        android:layout_marginHorizontal="@dimen/_15sdp"/>-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/delivery_txtEmail"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:textColor="@color/HomeThemeColor"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:fontFamily="@font/public_sans_semi_bold"-->
+                <!--                        android:text="@string/email"-->
+                <!--                        android:layout_marginHorizontal="@dimen/_15sdp"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/delivery_header_title"-->
+                <!--                        android:layout_marginStart="@dimen/_15sdp"-->
+                <!--                        android:layout_marginTop="@dimen/_10sdp"/>-->
+
+                <!--                    <View-->
+                <!--                        android:id="@+id/viewDeliveryPartner"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="2dp"-->
+                <!--                        android:visibility="visible"-->
+                <!--                        android:background="@color/HomeThemeColor"-->
+                <!--                        app:layout_constraintStart_toStartOf="@id/delivery_txtEmail"-->
+                <!--                        app:layout_constraintEnd_toEndOf="@id/delivery_txtEmail"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/delivery_txtEmail"/>-->
+
+
+                <!--                    // deliveryPartner-->
+                <!--                    <LinearLayout-->
+                <!--                        android:id="@+id/deliveryPartnerLayout"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:orientation="vertical"-->
+                <!--                        android:visibility="visible"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/delivery_txtEmail"-->
+                <!--                        android:layout_marginTop="@dimen/_35sdp">-->
+
+
+                <!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="match_parent">-->
+
+                <!--                            <ImageView-->
+                <!--                                android:id="@+id/imgEmail"-->
+                <!--                                android:layout_width="@dimen/_20sdp"-->
+                <!--                                android:layout_height="@dimen/_20sdp"-->
+                <!--                                android:src="@drawable/email"-->
+                <!--                                android:visibility="visible"-->
+                <!--                                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                                app:layout_constraintTop_toTopOf="@id/viewHorizontal1"-->
+                <!--                                app:layout_constraintBottom_toBottomOf="@id/viewHorizontal1"-->
+                <!--                                android:layout_marginStart="@dimen/_15sdp"/>-->
+
+                <!--                            <View-->
+                <!--                                android:id="@+id/viewHorizontal1"-->
+                <!--                                android:layout_width="2dp"-->
+                <!--                                android:visibility="visible"-->
+                <!--                                android:layout_height="@dimen/_22sdp"-->
+                <!--                                android:layout_marginStart="@dimen/_10sdp"-->
+                <!--                                android:background="@color/HomeThemeColor"-->
+                <!--                                app:layout_constraintStart_toEndOf="@id/imgEmail"-->
+                <!--                                app:layout_constraintTop_toTopOf="parent"-->
+                <!--                                />-->
+
+                <!--                            <EditText-->
+                <!--                                android:id="@+id/etEmail"-->
+                <!--                                android:layout_width="0dp"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:hint="@string/hint_email"-->
+                <!--                                android:inputType="textEmailAddress"-->
+                <!--                                android:maxLength="30"-->
+                <!--                                android:maxLines="1"-->
+                <!--                                android:textSize="@dimen/_11sdp"-->
+                <!--                                android:visibility="visible"-->
+                <!--                                app:layout_constraintStart_toEndOf="@id/viewHorizontal1"-->
+                <!--                                app:layout_constraintTop_toTopOf="@id/viewHorizontal1"-->
+                <!--                                app:layout_constraintBottom_toBottomOf="@id/viewHorizontal1"-->
+                <!--                                android:textColor="@color/Heading_Color"-->
+                <!--                                android:background="@null"-->
+                <!--                                app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                                android:layout_marginHorizontal="@dimen/_15sdp"/>-->
+
+                <!--                            <View-->
+                <!--                                android:id="@+id/viewPhoneNumber"-->
+                <!--                                android:layout_width="match_parent"-->
+                <!--                                android:layout_height="2dp"-->
+                <!--                                android:visibility="visible"-->
+                <!--                                android:layout_marginHorizontal="@dimen/_15sdp"-->
+                <!--                                android:background="@color/HomeThemeColor"-->
+                <!--                                app:layout_constraintTop_toBottomOf="@id/viewHorizontal1"-->
+                <!--                                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                                app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                                android:layout_marginTop="@dimen/_5sdp"/>-->
+
+                <!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <!--                    </LinearLayout>-->
+
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tvEmail"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:textColor="@color/error_color"-->
+                <!--                        android:textSize="@dimen/_10sdp"-->
+                <!--                        android:text=""-->
+                <!--                        android:layout_marginHorizontal="@dimen/_15sdp"-->
+                <!--                        android:visibility="visible"-->
+                <!--                        android:fontFamily="@font/public_sans_regular"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/deliveryPartnerLayout"/>-->
+
+
+                <!--                    // password-->
+
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/imgDeliveryPassword"-->
+                <!--                        android:layout_width="@dimen/_20sdp"-->
+                <!--                        android:layout_height="@dimen/_20sdp"-->
+                <!--                        android:src="@drawable/password"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="@id/viewHorizontal"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal"-->
+                <!--                        android:layout_marginStart="@dimen/_15sdp"/>-->
+
+                <!--                    <View-->
+                <!--                        android:id="@+id/viewHorizontal"-->
+                <!--                        android:layout_width="2dp"-->
+                <!--                        android:layout_height="@dimen/_22sdp"-->
+                <!--                        android:layout_marginStart="@dimen/_10sdp"-->
+                <!--                        android:background="@color/HomeThemeColor"-->
+                <!--                        app:layout_constraintStart_toEndOf="@id/imgDeliveryPassword"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/deliveryPartnerLayout"-->
+                <!--                        android:layout_marginTop="@dimen/_25sdp"/>-->
+
+                <!--                    <EditText-->
+                <!--                        android:id="@+id/etDeliveryPartnerPassword"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:hint="@string/hint_password"-->
+                <!--                        android:inputType="textPassword"-->
+                <!--                        android:maxLength="30"-->
+                <!--                        android:maxLines="1"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        app:layout_constraintStart_toEndOf="@id/viewHorizontal"-->
+                <!--                        app:layout_constraintTop_toTopOf="@id/viewHorizontal"-->
+                <!--                        app:layout_constraintEnd_toStartOf="@id/imgDeliveryEye"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal"-->
+                <!--                        android:textColor="@color/Heading_Color"-->
+                <!--                        android:background="@null"-->
+                <!--                        android:layout_marginStart="@dimen/_15sdp"/>-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/imgDeliveryEye"-->
+                <!--                        android:layout_width="@dimen/_20sdp"-->
+                <!--                        android:layout_height="@dimen/_20sdp"-->
+                <!--                        android:src="@drawable/ic_eye"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="@id/viewHorizontal"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="@id/viewHorizontal"-->
+                <!--                        android:layout_marginEnd="@dimen/_25sdp"/>-->
+
+                <!--                    <View-->
+                <!--                        android:id="@+id/viewDeliveryPassword"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="2dp"-->
+                <!--                        android:layout_marginHorizontal="@dimen/_15sdp"-->
+                <!--                        android:background="@color/HomeThemeColor"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/viewHorizontal"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        android:layout_marginTop="@dimen/_5sdp"/>-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tvDeliveryPassword"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:textColor="@color/error_color"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:text=""-->
+                <!--                        android:layout_marginHorizontal="@dimen/_15sdp"-->
+                <!--                        android:visibility="gone"-->
+                <!--                        android:fontFamily="@font/public_sans_regular"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/viewDeliveryPassword"/>-->
+
+
+                <!--                    // checkbox-->
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/cbDeliveryRemember"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/remember_me"-->
+                <!--                        android:textColor="@color/LightHomeThemeColor"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/viewHorizontal"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        android:layout_marginStart="@dimen/_15sdp"-->
+                <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:buttonTint="@color/HomeThemeColor"-->
+                <!--                        android:textSize="@dimen/_11sdp"/>-->
+
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/txtDeliveryForgetPassword"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/forgot_password"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:textColor="@color/LightHomeThemeColor"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="@id/cbDeliveryRemember"-->
+                <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                <!--                        android:layout_marginEnd="@dimen/_15sdp"/>-->
+
+
+                <!--                    <Button-->
+                <!--                        android:id="@+id/btnDeliveryLogin"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:background="@drawable/login_background"-->
+                <!--                        android:text="@string/login"-->
+                <!--                        android:textSize="@dimen/_14sdp"-->
+                <!--                        android:textAllCaps="false"-->
+                <!--                        android:paddingHorizontal="@dimen/_50sdp"-->
+                <!--                        android:paddingVertical="@dimen/_3sdp"-->
+                <!--                        android:layout_marginTop="@dimen/_30sdp"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/cbDeliveryRemember"/>-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/txtDeliverySignUp"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/don_t_have_an_account_signup"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/btnDeliveryLogin"-->
+                <!--                        android:textSize="@dimen/_10sdp"-->
+                <!--                        android:textColor="@color/Heading_Color"-->
+                <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                <!--                        android:fontFamily="@font/public_sans_regular"/>-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/txtDeliveryTerms"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:justificationMode="inter_word"-->
+                <!--                        android:layout_marginHorizontal="@dimen/_30sdp"-->
+                <!--                        android:text="@string/by_accessing_this_site_you_accept_the_terms_conditions_and_privacy_policy"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/txtDeliverySignUp"-->
+                <!--                        app:layout_constraintBottom_toTopOf="@id/txtSwitchRoll"-->
+                <!--                        android:textSize="@dimen/_10sdp"-->
+                <!--                        android:textColor="@color/Heading_Color"-->
+                <!--                        android:layout_marginTop="@dimen/_35sdp"-->
+                <!--                        android:fontFamily="@font/public_sans_regular"/>-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/txtDeliverySwitchRoll"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/switch_role"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintBottom_toTopOf="@id/guideline"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/txtDeliveryTerms"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:textColor="@color/HomeThemeColor"-->
+                <!--                        android:layout_marginBottom="@dimen/_20sdp"-->
+                <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                <!--                        android:fontFamily="@font/public_sans_semi_bold"/>-->
+
+
+                <!--                    <androidx.constraintlayout.widget.Guideline-->
+                <!--                        android:id="@+id/guideline"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:layout_constraintGuide_percent="0.95"/>-->
+
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:theme="@style/progressBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

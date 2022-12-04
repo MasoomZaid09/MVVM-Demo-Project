@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.DeliveryTab.PaymentReciptFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Receipts"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:textColor="@color/HomeThemeColor"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/PaymentRecycler"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            tools:itemCount="2"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            tools:listitem="@layout/payment_recipt_modellayout"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txtNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data Found"
+        android:visibility="gone"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/Heading_Color"
+        android:fontFamily="@font/poppins_light"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

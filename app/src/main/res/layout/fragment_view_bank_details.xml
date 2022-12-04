@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.account.ViewBankDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="19dp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/retailer_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                            android:id="@+id/showprofile_image"-->
+<!--                            android:layout_width="111dp"-->
+<!--                            android:layout_height="111dp"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/profileimage"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintHorizontal_bias="0.5"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/Linear_Bank_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Bank name"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.6"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/bank_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                tools:text="SBI Bank"
+                                android:textColor="@color/account_text_color"
+                                android:maxLines="2"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_FullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:maxLines="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Account number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.8"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/account_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                tools:text="256652525252"
+                                android:maxLines="2"
+                                android:textColor="@color/account_text_color"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.5"
+                            android:maxLines="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Account Holder Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/account_holder_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.5"
+                            android:maxLines="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center_vertical"
+                            tools:text="Pramod"
+                            android:textColor="@color/account_text_color"
+                            android:textSize="@dimen/_11sdp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:maxLines="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Bank IFSC"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bank_ifsc"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.8"
+                            android:maxLines="2"
+                            android:fontFamily="@font/poppins_regular"
+                            tools:text="PUNB1254"
+                            android:singleLine="true"
+                            android:textColor="@color/account_text_color"
+                            android:textSize="@dimen/_11sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:maxLines="2"
+
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Type Of Account"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/type_of_account"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.8"
+                            android:fontFamily="@font/poppins_regular"
+                            tools:text="Credit Account"
+                            android:maxLines="2"
+                            android:textColor="@color/account_text_color"
+                            android:textSize="@dimen/_11sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/editLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="19dp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                            android:id="@+id/showprofile_image_delievery"-->
+<!--                            android:layout_width="111dp"-->
+<!--                            android:layout_height="111dp"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/profileimage"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintHorizontal_bias="0.5"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/imgSelector"-->
+<!--                            android:layout_width="@dimen/_20sdp"-->
+<!--                            android:layout_height="@dimen/_20sdp"-->
+<!--                            android:src="@drawable/ic_camera"-->
+<!--                            android:visibility="gone"-->
+<!--                            app:layout_constraintEnd_toEndOf="@id/showprofile_image_delievery"-->
+<!--                            app:layout_constraintBottom_toBottomOf="@id/showprofile_image_delievery"-->
+<!--                            android:layout_marginEnd="@dimen/_10sdp"/>-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Bank name"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.8"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/etBankName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textCapWords"
+                                android:maxLength="30"
+                                android:hint="SBI Bank"
+                                android:textSize="@dimen/_11sdp"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                                android:textColor="@color/account_text_color"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:background="@null"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvBankName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text="asd"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Account number"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.8"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/etAccountNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="20"
+                                android:hint="256652525252"
+                                android:textSize="@dimen/_11sdp"
+                                android:digits="0123456789"
+                                android:textColor="@color/account_text_color"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:background="@null"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAccountNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text="asd"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.4"
+                            android:maxLines="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Account Holder Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/etAccountName"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="30"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/_11sdp"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Pramod"
+                            android:textColor="@color/account_text_color"
+                            android:layout_weight="1.6"
+                            android:maxLines="1"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAccountName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:maxLines="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Bank IFSC"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/etIFSC"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.8"
+                            android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_margin="3dp"
+                            android:hint="PUNB1254"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="11"
+                            android:textAllCaps="true"
+                            android:textColor="@color/account_text_color"
+                            android:textSize="@dimen/_11sdp"
+                            android:singleLine="true"
+                            android:background="@null"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvBankIFSC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1.2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Type Of Account"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                        <Spinner
+                            android:id="@+id/type_of_account_spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.8"
+                            android:dropDownWidth="@dimen/_140sdp"
+                            android:entries="@array/account_list"
+                            android:theme="@style/Spinner"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/_3sdp"
+                            android:spinnerMode="dropdown" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:paddingHorizontal="@dimen/_35sdp"
+            android:text="Update"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editLayout"/>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:paddingHorizontal="@dimen/_35sdp"
+            android:text="Edit"
+            android:visibility="visible"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLayout"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

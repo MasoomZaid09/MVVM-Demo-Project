@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.payments.PaymentDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+
+    <LinearLayout
+        android:id="@+id/track_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:weightSum="3.2"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_circle_24"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/track_view1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/HomeThemeColor"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_circle_24"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/track_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/HomeThemeColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_circle_24"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/track_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/HomeThemeColor" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_circle_24"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/track_line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_45sdp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_baseline_circle_24"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white" />
+
+                        <View
+                            android:id="@+id/track_view12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/HomeThemeColor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_baseline_circle_24"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/white" />
+
+                        <View
+                            android:id="@+id/track_view22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_baseline_circle_24"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/white" />
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPaymentType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/track_line2">
+
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/mastercard_img"
+                android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+
+              <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                  android:layout_marginHorizontal="@dimen/_5sdp"
+                android:src="@drawable/visa_img"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/card_number"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llPaymentType"/>
+
+        <EditText
+            android:id="@+id/etCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@drawable/focus"
+            android:elevation="@dimen/_1sdp"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp"
+            android:inputType="number"
+            android:maxLength="16"
+            android:fontFamily="@font/poppins_light"
+            android:hint="@string/enter_card_number"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCardNumber"/>
+
+        <TextView
+            android:id="@+id/tvCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/_10sdp"
+            android:text=""
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/public_sans_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber"/>
+
+        <LinearLayout
+            android:id="@+id/llCardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCard">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/card_expiry"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/llCardDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:padding="@dimen/_2sdp"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/focus"
+                    android:elevation="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_weight="1">
+
+                    <Spinner
+                        android:id="@+id/etCardExpiryMM"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:entries="@array/Month"
+                        android:theme="@style/creditCardSpinner"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_7sdp"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/etCardExpiryMM"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_2sdp"-->
+                <!--                    android:layout_marginLeft="@dimen/_2sdp"-->
+                <!--                    android:layout_marginRight="@dimen/_2sdp"-->
+                <!--                    android:layout_marginBottom="@dimen/_2sdp"-->
+                <!--                    android:background="@drawable/focus"-->
+                <!--                    android:elevation="@dimen/_1sdp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:inputType="number"-->
+                <!--                    android:maxLength="2"-->
+                <!--                    android:singleLine="true"-->
+                <!--                    android:textSize="@dimen/_14sdp"-->
+                <!--                    android:fontFamily="@font/poppins_light"-->
+                <!--                    android:hint="@string/mm"-->
+                <!--                    android:padding="@dimen/_7sdp" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/focus"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:elevation="@dimen/_1sdp"
+                    android:layout_weight="1">
+                    <Spinner
+                        android:id="@+id/etCardExpiryYY"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:entries="@array/Year"
+                        android:theme="@style/creditCardSpinner"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_7sdp"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/etCardExpiryYY"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_2sdp"-->
+                <!--                    android:inputType="number"-->
+                <!--                    android:maxLength="4"-->
+                <!--                    android:layout_marginLeft="@dimen/_2sdp"-->
+                <!--                    android:layout_marginRight="@dimen/_2sdp"-->
+                <!--                    android:layout_marginBottom="@dimen/_2sdp"-->
+                <!--                    android:background="@drawable/focus"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:singleLine="true"-->
+                <!--                    android:elevation="@dimen/_1sdp"-->
+                <!--                    android:textSize="@dimen/_14sdp"-->
+                <!--                    android:fontFamily="@font/poppins_light"-->
+                <!--                    android:hint="@string/yyyy"-->
+                <!--                    android:padding="@dimen/_7sdp" />-->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCardExpiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error_color"
+                android:textSize="@dimen/_10sdp"
+                android:text=""
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:visibility="gone"
+                android:fontFamily="@font/public_sans_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etCardExpiryMM"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/card_cvc"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/etCVV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:background="@drawable/focus"
+                android:elevation="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:inputType="numberPassword"
+                android:maxLength="3"
+                android:singleLine="true"
+                android:fontFamily="@font/poppins_light"
+                android:hint="***"
+                android:textSize="@dimen/_14sdp"
+                android:padding="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tvCardCVV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error_color"
+                android:textSize="@dimen/_10sdp"
+                android:text=""
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:visibility="gone"
+                android:fontFamily="@font/public_sans_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etCardExpiryMM"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/card_holder_name"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/etCardHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:background="@drawable/focus"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:elevation="@dimen/_1sdp"
+                android:inputType="text"
+                android:maxLength="30"
+                android:fontFamily="@font/poppins_light"
+                android:singleLine="true"
+                android:hint="@string/enter_card_number"
+                android:textSize="@dimen/_14sdp"
+                android:padding="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tvCardHolderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error_color"
+                android:textSize="@dimen/_10sdp"
+                android:text=""
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:visibility="gone"
+                android:fontFamily="@font/public_sans_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etCardHolderName"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/login_background"
+            android:paddingHorizontal="@dimen/_35sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/payment"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llCardDetails"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

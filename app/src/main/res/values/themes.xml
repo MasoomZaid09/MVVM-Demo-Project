@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KanabixApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/HomeThemeColor</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/HomeThemeColor</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/HomeThemeColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="BottomSheetTheme" parent="Theme.Material3.Dark.BottomSheetDialog">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/HomeThemeColor</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/HomeThemeColor</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/HomeThemeColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Custom_Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey_button</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/HomeThemeColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    // adding custom style for tab_layout
+    <style name="CustomTabLayout" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    //data picker
+
+    <style name="DatePickerTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="colorAccent">@color/HomeThemeColor</item>
+    </style>
+
+    <style name="ProgressDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/HomeThemeColor</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/HomeThemeColor</item>
+    </style>
+
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/account_text_color</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+    </style>
+
+    <style name="creditCardSpinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textColor">@color/account_text_color</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+    <style name="progressBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorAccent">@color/HomeThemeColor</item>
+    </style>
+
+    <style name="Theme.KanabixApp.DefaultLottieLoader">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:adjustViewBounds">false</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="lottie_loop">true</item>
+        <item name="lottie_rawRes">@raw/addtocartlottie</item>
+    </style>
+
+    <style name="ratingTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/HomeThemeColor</item>
+        <item name="colorPrimaryVariant">@color/HomeThemeColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/HomeThemeColor</item>
+        <item name="colorSecondaryVariant">@color/HomeThemeColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/HomeThemeColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+</resources>

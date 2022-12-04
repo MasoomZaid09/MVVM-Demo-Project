@@ -1,0 +1,302 @@
+<resources>
+    <string name="app_name">Kanabix</string>
+    <string name="login">Login</string>
+    <string name="email">E-mail</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_password">Enter password</string>
+    <string name="remember_me">Remember me</string>
+
+
+    // mohit
+
+
+    // kavita
+
+
+    <string name="terms">Terms &amp; Conditons FAQs.</string>
+
+
+    // mohit
+
+
+    // kavita
+    <string name="post_code">Postal Code</string>
+    <string name="_3453">3453</string>
+    <string name="view_more"><u>View more</u></string>
+    <string name="about_this_product">About This Product</string>
+    <string name="product_discription_string">Made with real fruit puree and premium cannabinoid extracts, our tropical-flavored gummies provide a euphoric cerebral experience and a slightly relaxed physical feeling, along with a natural soft texture and mouthwatering tropical taste. Delta-8 THC is a milder version of its big sister Delta-9, with substantially lower psychoactive effects. Our broad-spectrum, GMO-free formula is made in the USA and contains no traces of Delta-9 THC</string>
+    <string name="product_added_to_cart">Product Added To Cart.</string>
+    <string name="go_to_cart">Add To Cart</string>
+    <string name="btn_buyNow">Buy Now</string>
+    <string name="search_by_category_name_or_product_code">Search by category name or product code</string>
+    <string name="location">Location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="aka_miracle_alien_cookies_miracle">Aka Miracle Alien Cookies, Miracle</string>
+    <string name="_221_">$221</string>
+    <string name="price">\u20B9 0.0</string>
+    <string name="_15_off">15% off</string>
+    <string name="price_details_4_items">Price Details (Items)</string>
+    <string name="bag_total">Bag Total</string>
+    <string name="shipping_change">Shipping Change</string>
+    <string name="_19">$19</string>
+    <string name="order_total">Order Total</string>
+    <string name="deliver_to_this_address">Deliver to This Address</string>
+    <string name="pramod">Pramod</string>
+    <string name="total_order_price">Total Order Price</string>
+    <string name="Continue">Continue</string>
+    <string name="track_order">TRACK ORDER</string>
+    <string name="tv_thanks">Thank’s For Shopping</string>
+    <string name="id_5865986435843">ID : #5865986435843</string>
+    <string name="payment">Pay</string>
+    <string name="enter_card_number">Enter card number</string>
+    <string name="card_holder_name">Card Holder Name</string>
+    <string name="card_cvc">Card CVC</string>
+    <string name="mm">MM</string>
+    <string name="yyyy">YYYY</string>
+    <string name="card_expiry">Card Expiry</string>
+    <string name="card_number">Card number</string>
+    <string name="success">Success</string>
+    <string name="payment_successful">Payment Successful.</string>
+    <string name="total_16_00">Total : $16.00</string>
+    <string name="miracle_garden">Miracle Garden</string>
+
+
+    <string name="don_t_have_an_account_signup">Don\'t have an account?&lt;font color="#416654"> Signup&lt;/font></string>
+    <string name="by_accessing_this_site_you_accept_the_terms_conditions_and_privacy_policy">By accessing this site,you accept the Terms &amp; Conditions and Privacy Policy</string>
+
+
+    // mohit
+
+    <string name="mac">MAC</string>
+    <string name="aka_miracle_alien_cookies_miracle_cookies">Aka Miracle Alien Cookies, Miracle Cookies</string>
+    <string name="_221">$221</string>
+    <string name="mathew_marta">Mathew Marta</string>
+    <string name="address_string">Okhla Phase-1, New Delhi, India</string>
+    <string name="pincode_123456">Pincode - 123456</string>
+    <string name="_91_8076197211">+91-8076197211</string>
+    <string name="login_as">Login as </string>
+    <string name="delivery_partner">Delivery Partner</string>
+    <string name="customer">Customer</string>
+    <string name="forgot_password">Forgot password?</string>
+
+    // kavita
+    <string name="home">Home</string>
+    <string name="Category">Category</string>
+    <string name="Store">Store</string>
+    <string name="Orders">Orders</string>
+    <string name="Account">Account</string>
+    <string name="switch_role">Switch Role</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="title_sign_up">Sign Up</string>
+    <string name="enter_pincode">Enter pincode</string>
+    <string name="select_your_state">Select your State</string>
+    <string name="select_your_country">Select your Country</string>
+    <string name="select_your_city">Select your City</string>
+    <string name="enter_your_address">Enter your address</string>
+    <string name="please_confirm_password">Please confirm password</string>
+    <string name="i_agree_to_terms_and_conditions">I agree to Terms and Conditions</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="please_set_your_location_to_provide_closest_store_near_by_you">Please set your location to provide closest store near by you.</string>
+    <string name="enter_your_location_here">Enter your location here</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="i_agree_to_terms_and_conditions_amp_privacy_policy_and_share_my_location">I agree to &lt;font color="#416654">Terms and Conditions&lt;/font>&amp;&lt;font color="#416654"> Privacy Policy&lt;/font> and share my location</string>
+    <string name="set_now">Set Now</string>
+    <string name="please_enter_the_phone_number_you_d_like_your_password_reset_information_sent_to">Please enter the phone number you\'d like your password reset information sent to</string>
+    <string name="please_enter_the_email_address_you_d_like_your_password_reset_information_sent_to">Please enter the email address you\'d like your password reset information sent to</string>
+    <string name="send">Send</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="new_password">New password</string>
+    <string name="submit">Submit</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="please_enter_the_4_digits_otp_sent_on_your_registered_email_address">Please enter the 4 digits OTP sent on your registered email address.</string>
+    <string name="please_enter_the_4_digits_otp_sent_on_your_registered_mobile_number">Please enter the 4 digits OTP sent on your registered mobile number.</string>
+    <string name="_0_59">0:59</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="enter_4_digits_code">Enter 4 - digits code</string>
+    <string name="already_have_an_account_login">Already have an account ? &lt;font color="#416654">Login&lt;/font></string>
+    <string name="enter_your_name">Enter your name</string>
+
+
+    <string name="EditForm"><u>Edit Business Form</u></string>
+    <string name="contact_number_hint">123456789</string>
+    <string name="delivery_partner_id">Delivery Partner ID</string>
+    <string name="enter_your_delivery_partner_id">Enter your delivery partner id</string>
+    <string name="please_enter_your_bank_details">Please Enter Your Bank Details</string>
+    <string name="enter_your_account_name">Enter your account number</string>
+    <string name="account_number">Account Number *</string>
+    <string name="account_holder_name">Account Holder Name *</string>
+    <string name="enter_your_account_holder_name">Enter your account holder name</string>
+    <string name="bank_ifsc">Bank IFSC *</string>
+    <string name="enter_your_ifsc">Enter your ifsc</string>
+    <string name="enter_your_type_of_account">Enter your type of account</string>
+    <string name="type_of_account">Type Of Account *</string>
+    <string name="set_your_location">Set Your Location</string>
+    <string name="enter_your_location">Enter your location</string>
+    <string name="thanks_for_your_registration">Thanks For your Registration!!</string>
+
+
+    <string name="Personal_Details">Personal Details</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="pin_code">Pin code</string>
+    <string name="city">City</string>
+    <string name="enter_your_city">Enter your city</string>
+    <string name="enter_your_state">Enter your state</string>
+    <string name="update">Update</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="change_delivery_location">Change Delivery Location</string>
+    <string name="save_address">Save Address</string>
+    <string name="_91_8989787654">+91-8989787654</string>
+    <string name="pincode">Pincode - 123456</string>
+    <string name="full_address">Okhla Phase-1, New Delhi, India</string>
+    <string name="lastname"> Marta</string>
+    <string name="firstname">Mathew</string>
+    <string name="products_for_you">Products for you</string>
+    <string name="high_quality_cbd_products">High quality \nproducts</string>
+    <string name="view_all_offers">View all offers</string>
+    <string name="kanabix_deals">Kanabix Deals</string>
+    <string name="offer_ends_in_20h_51m_6s">Offer ends In 20h 51m 6s</string>
+    <string name="search">Search</string>
+    <string name="all_popular">All popular</string>
+    <string name="hi_john">Hi, John</string>
+    <string name="order_1475548">ORDER #1475548</string>
+    <string name="place_on_n03_08_2022_19_43">&lt;font color="#AAAAAA">PLACED ON &lt;/font> \n 03-08-2022 19:43</string>
+    <string name="customer_details">Customer Details</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="manik">Manik</string>
+    <string name="email_id">Email ID</string>
+    <string name="find_location">Find Location</string>
+    <string name="orderStatus">Order Status</string>
+    <string name="delivering_status">Delivering Status</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="thanks_for_delivery_this_order">Thanks For Delivery This Order !!</string>
+    <string name="pic_time">Courier pick up from the store :</string>
+    <string name="dd_mm_yyyy">dd-mm-yyyy</string>
+    <string name="expected_delivery_date">Expected Delivery date :</string>
+    <string name="cinfirm">Confirm</string>
+    <string name="orderAccepted">Order Status : Accepted</string>
+    <string name="date">03-08-2022</string>
+    <string name="pickUpFrom">Courier pick up from the store :</string>
+    <string name="deleviryTime">Expected Delivery date :</string>
+    <string name="deleveredDateAndTime">Deliverd date and Time :</string>
+    <string name="dateAndTime">03-08-2022 07:01</string>
+    <string name="payment_status">Payment Status :</string>
+    <string name="recived">Recevid</string>
+    <string name="delevredOderdStatus">Delivering Status : Cancelld</string>
+    <string name="_03_08_2022">03-08-2022</string>
+    <string name="orderStatusDecline">delivering Status : Declined</string>
+    <string name="reson">Reason</string>
+    <string name="reason_string">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</string>
+    <string name="terms_desc">An “agree to terms and conditions” checkbox is a method of protecting your business by requiring that users acknowledge the rules they must abide by when using your services. It is often presented as a pop-up when a user first enters a website or begins using a service.</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="you_feedback_help_us_make_your_experience_better">You feedback help us make your experience better.</string>
+    <string name="would_you_like_to_rate_us_on_play_store">Would you like to rate us on Play Store?</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change password</string>
+    <string name="edit_bank_details">View Bank Details</string>
+
+    <string name="full_name">Full Name</string>
+    <string name="_1234567890">1234567890</string>
+    <string name="emai_string">123@gmail.com</string>
+    <string name="_123456">123456</string>
+    <string name="delhi">Delhi</string>
+    <string name="state">State</string>
+    <string name="d_115">D-115 Delhi</string>
+    <string name="full_add">Full Address</string>
+    <string name="uploaded_document">Uploaded Document</string>
+    <string name="pdf_file">Pdf file</string>
+    <string name="your_orders">Your Orders</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="_3_aug_2022_12_05_am">3 Aug 2022,12:05 AM</string>
+    <string name="order_details">Order Details</string>
+    <string name="product_detail">Product Detail</string>
+    <string name="order_tracking">Order Tracking</string>
+    <string name="order">Order</string>
+    <string name="shipped">Current Status : Delivered</string>
+    <string name="breif_the_reason_for_rejection">Brief the reason for rejection</string>
+    <string name="reciptDetails">Payment Recevied Details</string>
+    <string name="status_cancled">Order Status : Cancelled</string>
+    <string name="delete">Are you sure you want to \n delete this address?</string>
+    <string name="notification">Are you sure you want to \n delete this notification?</string>
+    <string name="cart">Are you sure you want to \n delete this item?</string>
+    <string name="upload_documents">Upload Document</string>
+
+    <string-array name="account_list">
+        <item>Select</item>
+        <item>Savings Account</item>
+        <item>Current Account</item>
+        <item>Salary Account</item>
+        <item>NRI Account</item>
+    </string-array>
+
+    <string-array name="Month">
+        <item>Select Month</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="Year">
+        <item>Select Year</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+        <item>2035</item>
+        <item>2036</item>
+        <item>2037</item>
+        <item>2038</item>
+        <item>2039</item>
+        <item>2040</item>
+    </string-array>
+
+
+    <string name="Rs">\u20B9</string>
+
+    <string name="delivery_fee_10">Delivery Fee: \u20B920</string>
+
+    <string name="loading">Please Wait</string>
+    <string name="no_products_found">No Products Found</string>
+
+
+    <string-array name="order_status_list">
+        <item>Select</item>
+        <item>PICKED</item>
+    </string-array>
+
+
+    <string-array name="picked_order_status_list">
+        <item>SHIPPED</item>
+    </string-array>
+
+
+    <string-array name="shipped_order_status_list">
+        <item>DELIVERED</item>
+    </string-array>
+
+
+</resources>

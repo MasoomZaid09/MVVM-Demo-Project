@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/delivery_nav_graph"
+    app:startDestination="@id/orderManagment2">
+
+    <fragment
+        android:id="@+id/paymentReciptFragment"
+        android:name="com.kanabix.ui.fragment.DeliveryTab.PaymentReciptFragment"
+        android:label="fragment_payment_recipt"
+        tools:layout="@layout/fragment_payment_recipt">
+
+        <action
+            android:id="@+id/action_paymentReciptFragment_to_paymentViewFragment"
+            app:destination="@id/paymentViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myAccount2"
+        android:name="com.kanabix.ui.fragment.Tabs.MyAccount"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account">
+
+        <action
+            android:id="@+id/action_myAccount2_to_settingsFragment2"
+            app:destination="@id/settingsFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_myAccount2_to_rerferId2"
+            app:destination="@id/rerferId2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_myAccount2_to_editprofile2"
+            app:destination="@id/editprofile2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderManagment2"
+        android:name="com.kanabix.ui.fragment.DeliveryTab.OrderManagment"
+        android:label="fragment_order_managment"
+        tools:layout="@layout/fragment_order_managment">
+        <action
+            android:id="@+id/action_orderManagment2_to_orderDetailsFragment2"
+            app:destination="@id/orderDetailsFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDetailsFragment2"
+        android:name="com.kanabix.ui.fragment.orderFlow.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details">
+
+        <action
+            android:id="@+id/action_orderDetailsFragment2_to_otpOrderScreen"
+            app:destination="@id/otpOrderScreen"
+            app:enterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_in_top"
+            app:popEnterAnim="@anim/slide_out_bottom"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.kanabix.ui.fragment.account.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment2_to_viewBankDetails2"
+            app:destination="@id/viewBankDetails2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment2_to_changepassword2"
+            app:destination="@id/changepassword2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rerferId2"
+        android:name="com.kanabix.ui.fragment.account.RerferId"
+        android:label="fragment_rerfer_id"
+        tools:layout="@layout/fragment_rerfer_id">
+        <action
+            android:id="@+id/action_rerferId2_to_termsFragment2"
+            app:destination="@id/termsFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_rerferId2_to_faqFragment2"
+            app:destination="@id/faqFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editprofile2"
+        android:name="com.kanabix.ui.fragment.Editprofile"
+        android:label="Editprofile" />
+
+    <fragment
+        android:id="@+id/faqFragment2"
+        android:name="com.kanabix.ui.fragment.legals.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/termsFragment2"
+        android:name="com.kanabix.ui.fragment.legals.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
+
+    <fragment
+        android:id="@+id/viewBankDetails2"
+        android:name="com.kanabix.ui.fragment.account.ViewBankDetails"
+        android:label="fragment_view_bank_details"
+        tools:layout="@layout/fragment_view_bank_details" />
+
+    <fragment
+        android:id="@+id/changepassword2"
+        android:name="com.kanabix.ui.fragment.account.Changepassword"
+        android:label="fragment_changepassword"
+        tools:layout="@layout/fragment_changepassword">
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/otpOrderScreen"
+        android:name="com.kanabix.ui.fragment.orderFlow.OtpOrderScreen"
+        android:label="fragment_otp_order_screen"
+        tools:layout="@layout/fragment_otp_order_screen" />
+    <fragment
+        android:id="@+id/paymentViewFragment"
+        android:name="com.kanabix.ui.fragment.DeliveryTab.PaymentViewFragment"
+        android:label="fragment_payment_view"
+        tools:layout="@layout/fragment_payment_view" />
+
+
+</navigation>

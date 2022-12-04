@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.acitivity.LocationActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cardcorner"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@color/HomeThemeColor"
+            android:src="@drawable/half_splash" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_marginBottom="-40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/header_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Set your location"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+                    <TextView
+                        android:id="@+id/subHeader_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/please_set_your_location_to_provide_closest_store_near_by_you"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/Heading_Color"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/header_title"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <ImageView
+                        android:id="@+id/imgLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_180sdp"
+                        android:src="@drawable/location_image"
+                        android:layout_marginHorizontal="@dimen/_25sdp"
+                        app:layout_constraintTop_toBottomOf="@id/subHeader_title"
+                        android:layout_marginTop="@dimen/_20sdp"/>
+
+
+                    <ImageView
+                        android:id="@+id/logoLocation"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_location_logo"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgLocation"
+                        android:layout_marginStart="@dimen/_15sdp"/>
+
+
+                    <EditText
+                        android:id="@+id/etLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_your_location_here"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toEndOf="@id/logoLocation"
+                        app:layout_constraintTop_toTopOf="@id/logoLocation"
+                        app:layout_constraintBottom_toBottomOf="@id/logoLocation"
+                        android:textColor="@color/Heading_Color"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/viewLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@color/HomeThemeColor"
+                        app:layout_constraintTop_toBottomOf="@id/logoLocation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewLocation"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/locationLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:layout_constraintTop_toBottomOf="@id/viewLocation"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgLogo"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_live_location_logo"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toStartOf="@id/txtLiveLocation"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginEnd="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/txtLiveLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/use_current_location"
+                            android:textColor="@color/HomeThemeColor"
+                            android:textSize="@dimen/_11sdp"
+                            android:fontFamily="@font/public_sans_regular"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/imgLogo"
+                            app:layout_constraintBottom_toBottomOf="@id/imgLogo"
+                            android:layout_marginEnd="@dimen/_15sdp"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    <CheckBox
+                        android:id="@+id/cbRemember"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/i_agree_to_terms_and_conditions_amp_privacy_policy_and_share_my_location"
+                        android:textColor="@color/Heading_Color"
+                        app:layout_constraintTop_toBottomOf="@id/locationLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:buttonTint="@color/HomeThemeColor"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvTerms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:text=""
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/public_sans_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cbRemember"/>
+
+                    <Button
+                        android:id="@+id/btnSet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_background"
+                        android:text="@string/set_now"
+                        android:textSize="@dimen/_13sdp"
+                        android:textAllCaps="false"
+                        android:paddingHorizontal="@dimen/_65sdp"
+                        android:paddingVertical="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_30sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cbRemember"
+                        app:layout_constraintBottom_toTopOf="@id/guideline"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.95"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

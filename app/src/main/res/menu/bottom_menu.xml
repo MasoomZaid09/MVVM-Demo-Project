@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/customerHomePage"
+        android:title="Home"
+        android:icon="@drawable/home_grey_image"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/categoryList"
+        android:title="Category"
+        android:icon="@drawable/category_image"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/fragmentFindStoreNearYou"
+        android:icon="@drawable/store_grey_image"
+        android:title="Store"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/myOrdersFragment"
+        android:icon="@drawable/ic_order_grey"
+        android:title="Orders"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/myAccount"
+        android:icon="@drawable/account_grey_image"
+        android:title="Account"
+        app:showAsAction="ifRoom"/>
+
+</menu>

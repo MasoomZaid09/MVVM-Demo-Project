@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.acitivity.FragmentContainerActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_40sdp"-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:background="@color/white"-->
+<!--            app:menu="@menu/toolbar_menu"-->
+<!--            app:titleTextColor="@color/HomeThemeColor"-->
+<!--            android:elevation="4dp"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/_2sdp"
+            tools:ignore="MissingConstraints"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <RelativeLayout
+                    android:id="@+id/Header2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/Dashboard_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="left|center_vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/imageView_back"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/back_image" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/profile_ll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profileImage"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/place_holder" />
+
+                                <TextView
+                                    android:id="@+id/profileName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/_8sdp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Guest"
+                                    android:textColor="@color/HomeThemeColor"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/PreLoginTitle_TextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text=""
+                        android:textColor="@color/HomeThemeColor"
+                        android:textSize="@dimen/_13sdp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/iconsLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:id="@+id/notificationLayout"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="@id/cartLayout"
+                                app:layout_constraintEnd_toStartOf="@id/likeLayout"
+                                app:layout_constraintTop_toTopOf="@id/cartLayout">
+
+                                <ImageView
+                                    android:id="@+id/greyBell_ImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:padding="1dp"
+                                    android:src="@drawable/grey_bell"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/greenBell_ImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:padding="1dp"
+                                    android:src="@drawable/ic_bill_2"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/likeLayout"
+                                android:layout_width="@dimen/_27sdp"
+                                android:layout_height="@dimen/_27sdp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:padding="@dimen/_3sdp"
+                                app:layout_constraintBottom_toBottomOf="@id/cartLayout"
+                                app:layout_constraintEnd_toStartOf="@id/cartLayout"
+                                app:layout_constraintTop_toTopOf="@id/cartLayout">
+
+                                <ImageView
+                                    android:id="@+id/greyHeart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:padding="@dimen/_1sdp"
+                                    android:src="@drawable/greyheart"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/greenHeart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:padding="1dp"
+                                    android:src="@drawable/ic_green_heart"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/cartLayout"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/greyCart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:padding="1dp"
+                                    android:src="@drawable/grey_cart"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/greenCart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:padding="1dp"
+                                    android:src="@drawable/ic_green_cart"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/Add_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="+Address"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:navGraph="@navigation/nav_graph" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="3dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:itemIconSize="@dimen/_18sdp"
+            app:itemPaddingBottom="@dimen/_5sdp"
+            app:itemRippleColor="@null"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentContainerView"
+            app:menu="@menu/bottom_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

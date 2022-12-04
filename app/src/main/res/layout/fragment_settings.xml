@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context=".ui.fragment.account.SettingsFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <Button
+           android:id="@+id/btnEditBankDetails"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/login_button"
+           android:fontFamily="@font/poppins_medium"
+           android:layout_marginHorizontal="@dimen/_15sdp"
+           android:layout_marginTop="@dimen/_35sdp"
+           android:paddingHorizontal="@dimen/_35sdp"
+           android:text="@string/edit_bank_details"
+           android:visibility="visible"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:textSize="@dimen/_13sdp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent"/>
+
+       <Button
+           android:id="@+id/btnChangePassword"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/login_button"
+           android:fontFamily="@font/poppins_medium"
+           android:layout_marginHorizontal="@dimen/_15sdp"
+           android:layout_marginTop="@dimen/_20sdp"
+           android:paddingHorizontal="@dimen/_35sdp"
+           android:text="@string/change_password"
+           android:visibility="visible"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:textSize="@dimen/_13sdp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/btnEditBankDetails"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
